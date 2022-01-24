@@ -4,12 +4,13 @@ import { BlogForm } from './BlogForm';
 import { useForm } from 'react-hook-form';
 export default function App() {
   const firstForm = useForm();
-  const values = firstForm.watch();
-  console.log(values);
+  const firstFormValues = firstForm.watch();
+  const secondForm = useForm();
+  const secondFormValues = secondForm.watch();
   return (
     <div>
       <BlogForm form={firstForm} />
-      {/* <BlogForm /> */}
+      <BlogForm form={secondForm} />
     </div>
   );
 }
